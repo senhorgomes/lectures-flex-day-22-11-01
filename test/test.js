@@ -37,32 +37,18 @@ describe('Sad path', function () {
         expect(fctThatWillThrowAnError).to.throw(expectedResult);
     });
     it("whipcream needs to be a boolean", () => {
-        //This is the happy path of the test
-        //barista("Anne-Marie", "Small", [], true, [], true, 2)
-        //Create a variable based on the output
         const fctThatWillThrowAnError = () => barista("Anne-Marie", "Small", [], 0, [], true, 2);
-        //We dont want to match the value type, we want an error to be spit out
-        //It should expect result, to be an error
         const expectedResult = "Wrong type, please double check your order";
         expect(fctThatWillThrowAnError).to.throw(expectedResult);
     });
     it("espressoShots needs to be an integer", () => {
-        //This is the happy path of the test
-        //barista("Anne-Marie", "Small", [], true, [], true, 2)
-        //Create a variable based on the output
         const fctThatWillThrowAnError = () => barista("Anne-Marie", "Small", [], true, [], true, []);
-        //We dont want to match the value type, we want an error to be spit out
-        //It should expect result, to be an error
         const expectedResult = "Wrong type, please double check your order";
         expect(fctThatWillThrowAnError).to.throw(expectedResult);
     });
+    //By placing an x beside our test, mocha will skip the test
     xit("syrups needs to be an array", () => {
-        //This is the happy path of the test
-        //barista("Anne-Marie", "Small", [], true, [], true, 2)
-        //Create a variable based on the output
         const fctThatWillThrowAnError = () => barista("Anne-Marie", "Small", [], true, 0, true, 2);
-        //We dont want to match the value type, we want an error to be spit out
-        //It should expect result, to be an error
         const expectedResult = "Wrong type, please double check your order";
         expect(fctThatWillThrowAnError).to.throw(expectedResult);
     });
